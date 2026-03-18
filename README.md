@@ -59,6 +59,7 @@ O que é bom ou ruim nos Singletons:
 - Viola o princípio da responsabilidade única;
 - Requer tratamento especial em casos de concorrência;
 
+---
 
 # Builder - Creational (Criação)
 
@@ -69,22 +70,6 @@ O que é bom ou ruim nos Singletons:
 ---
 
 ## Destilando a intenção
-
-Em vídeo: https://www.youtube.com/watch?v=2VwLvwsIu-8&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=6
-
-A intenção acima significa que:
-
-* O padrão sugere a separação do código que cria e o código que usa o objeto
-* Trata da criação de objetos complexos (complexos de verdade), como:
-  - Objetos com construtores muito complexos
-  - Objetos compostos de vários objetos (composite)
-  - Objetos com algoritmo de criação complexo
-
-Além disso, o padrão também:
-
-- Permite a criação de um objeto em etapas
-- Permite method chaining (encadeamento de métodos)
-- Permite que o objeto final varie em dados e tipo
 
 ---
 
@@ -117,3 +102,38 @@ O que é bom ou ruim no Builder:
 
 - O código final pode se tornar muito complexo
 
+---
+
+# Prototype - Creational (Criação)
+
+## Intenção
+
+_Especificar os tipos de objetos a serem criados usando uma instância-protótipo e criar novos objetos pela cópia desse protótipo._
+
+---
+
+## Estrutura
+
+Veja a pasta diagramas nessa mesma pasta.
+
+## Aplicabilidade
+
+Use o Prototype quando:
+
+- precisar que seu código não dependa de classes concretas para a criação de novos objetos
+- quiser evitar explosão de subclasses para objetos muito similares
+- quiser evitar a recriação de objetos "caros" ou "complexos"
+
+## Consequências
+
+O que é bom ou ruim no Prototype:
+
+**Bom:**
+
+- Oculta classes concretas do código cliente
+- Ajuda na criação de objetos caros ou complexos
+- Evita a explosão de subclasses
+
+**Ruim:**
+
+- Clonar objetos que que tem referências para outros objetos pode ser super complexo
